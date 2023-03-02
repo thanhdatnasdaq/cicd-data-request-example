@@ -1,25 +1,3 @@
-pipeline{
-    agent any
-    stages{
-        stage("Setup"){
-            steps{
-                echo "setting up ..."
-                sh "java -version"
-            }
-        }
-        stage("Build"){
-            steps{
-                echo "building ..."
-                script{
-                    def counter = new counter()
-                    counter.printCounter()
-                }
-            }
-        }
-        stage("Deploy"){
-            steps{
-                echo "deploy ..."  
-            }
-        }
-    }
-}
+@Library('data-request-lib') _
+// Using Shared Jenkins Library
+dataRequest("Data-Request Test", "java11")
