@@ -33,28 +33,28 @@ pipeline{
                         },
                         thread2:{
                             if(!exeQueue.isEmpty()){ executeParallel(exeQueue)}
-                        }
+                        },
                         thread3:{
                             if(!exeQueue.isEmpty()){ executeParallel(exeQueue)}
-                        }
+                        },
                         thread4:{
                             if(!exeQueue.isEmpty()){ executeParallel(exeQueue)}
-                        }
+                        },
                         thread5:{
                             if(!exeQueue.isEmpty()){ executeParallel(exeQueue)}
-                        }
+                        },
                         thread6:{
                             if(!exeQueue.isEmpty()){ executeParallel(exeQueue)}
-                        }
+                        },
                         thread7:{
                             if(!exeQueue.isEmpty()){ executeParallel(exeQueue)}
-                        }
+                        },
                         thread8:{
                             if(!exeQueue.isEmpty()){ executeParallel(exeQueue)}
-                        }
+                        },
                         thread9:{
                             if(!exeQueue.isEmpty()){ executeParallel(exeQueue)}
-                        }
+                        },
                         thread10:{
                             if(!exeQueue.isEmpty()){ executeParallel(exeQueue)}
                         }
