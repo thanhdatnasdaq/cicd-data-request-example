@@ -1,5 +1,5 @@
-def call(projectName, requiredAgent='java8'){
 def exeQueue = []
+def call(projectName, requiredAgent='java8'){
 pipeline{
     agent any
     
