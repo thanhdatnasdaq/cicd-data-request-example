@@ -19,7 +19,7 @@ pipeline{
                     sh "env"
                     echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                     script{                        
-                        readExampleFile()
+                        readExampleFile(List exeQueue)
                     }  
                 }
             }
@@ -72,21 +72,21 @@ pipeline{
     }
 }
 
-def readExampleFile(){
+def readExampleFile(List exeQueue){
     def data = readFile("example.txt").readLines()
     for(line in data){
         exeQueue.add(line)
     }
 }
 
-def executeParallel(){
+def executeParallel(List exeQueue){
     while(exeQueue.size > 10){
         print(exeQueue[0])
         exeQueue.remove(0)
     }
 }
 
-def executeHelper(){
+def executeHelper(List exeQueue){
     while(exeQueue.size > 0){
         print(exeQueue[0])
         exeQueue.remove(0)
