@@ -66,14 +66,6 @@ pipeline{
             steps{
                 echo "deploying ..."
                 echo "confirmDeploy: ${params.confirmDeploy}"
-                script{
-                    if(params.confirmDeploy == false){
-                        echo "Fail to deploy"
-                        }else{
-                        currentBuild.result = "SUCCESS"
-                        echo "Status: ${currentBuild.result}"
-                        }
-                    }
                 }
             }
         }
